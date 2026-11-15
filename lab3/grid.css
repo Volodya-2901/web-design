@@ -1,0 +1,141 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 24px 0 40px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.row {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.column {
+    padding: 0 1.5%;
+    margin-bottom: 36px;
+    min-width: 0;
+}
+
+.card {
+    border: 3px solid #000000;
+    background-color: #d6e9d2;
+}
+
+.caption {
+    width: 160px;
+    max-width: 100%;
+    margin: 0;
+    padding: 6px 8px;
+    border-left: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.caption-1 {
+    background-color: #f0a500;
+    color: #000000;
+}
+
+.caption-2 {
+    background-color: #d60078;
+    color: #ffffff;
+}
+
+.caption-3 {
+    background-color: #f7d9d3;
+    color: #000000;
+}
+
+.card p {
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.65;
+    overflow-wrap: break-word;
+}
+
+nav {
+    width: 90%;
+    margin: 0 auto 30px;
+}
+
+    nav a {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        margin-bottom: 12px;
+        color: #174b89;
+        font-size: 18px;
+    }
+
+        nav a:hover {
+            text-decoration: none;
+        }
+
+@media (max-width: 768px) {
+    .row {
+        width: 84%;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    .caption {
+        font-size: 21px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.column {
+    grid-column: span 12;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    height: 100%;
+}
+
+.caption {
+    justify-self: end;
+}
+
+@media (min-width: 769px) {
+    .column {
+        grid-column: span 6;
+    }
+
+        .column:last-child {
+            grid-column: span 12;
+        }
+}
+
+@media (min-width: 993px) {
+    .column,
+    .column:last-child {
+        grid-column: span 4;
+    }
+}
