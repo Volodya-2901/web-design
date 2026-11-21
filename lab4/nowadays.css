@@ -1,0 +1,66 @@
+﻿body {
+    h1 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .back-link {
+        font-style: italic;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .center-title {
+        text-align: center;
+    }
+
+    ul.shopping-list li:nth-child(odd) {
+        background-color: #e0e0e0;
+        color: #111111;
+    }
+
+    ul.shopping-list li:nth-child(even) {
+        background-color: #ffffff;
+        color: #111111;
+    }
+
+    ul.shopping-list li {
+        padding: 4px 8px;
+        margin: 2px 0;
+    }
+
+    ol.recipe-list > li:nth-child(3):hover,
+    ol.recipe-list > li:nth-child(5):hover {
+        cursor: pointer;
+    }
+
+    ol.recipe-list > li:nth-child(4) {
+        background-color: #ffe4b5;
+        padding: 4px 8px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 20px;
+    }
+
+    .nowadays-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+        .nowadays-layout section {
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+    @media (min-width: 992px) {
+        .nowadays-layout {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+}

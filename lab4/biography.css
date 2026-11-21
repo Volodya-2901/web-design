@@ -1,0 +1,146 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22px;
+}
+
+.back-link {
+    font-style: italic;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.contents-title {
+    text-align: center;
+    font-size: 18px;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.btn-link:link,
+.btn-link:visited {
+    display: inline-block;
+    width: 220px;
+    max-width: 100%;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    border: 2px solid #000080;
+    font-weight: 500;
+}
+
+.btn-link:hover {
+    background-color: magenta;
+    color: white;
+    border-color: #8b008b;
+}
+
+.btn-link:active {
+    background-color: yellow;
+    color: black;
+    border-color: #b8860b;
+}
+
+.biography-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 20px;
+}
+
+    .biography-grid article {
+        grid-column: span 12;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        margin: 0;
+        font-size: 120%;
+    }
+
+.bio-content {
+    flex-grow: 1;
+    padding: 16px;
+    border: 1px solid black;
+    color: white;
+    overflow-wrap: anywhere;
+}
+
+    .bio-content h2 {
+        font-size: 120%;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .bio-content p {
+        margin-bottom: 0;
+        padding: 0;
+        color: inherit;
+    }
+
+#base .bio-content {
+    background-color: #2b2b2b;
+}
+
+#childhood .bio-content {
+    background-color: #1a365d;
+}
+
+#school .bio-content {
+    background-color: #2e4a32;
+}
+
+#after-school .bio-content {
+    background-color: #4a284e;
+}
+
+#university .bio-content {
+    background-color: #4a3821;
+}
+
+.to-contents {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.to-top {
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .biography-grid article {
+        grid-column: span 6;
+    }
+
+        .biography-grid article:last-child {
+            grid-column: span 12;
+        }
+}
+
+@media (min-width: 992px) {
+    .biography-grid article {
+        grid-column: span 4;
+    }
+
+        .biography-grid article:nth-child(4),
+        .biography-grid article:nth-child(5) {
+            grid-column: span 6;
+        }
+}
